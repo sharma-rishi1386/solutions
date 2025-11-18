@@ -1,0 +1,1129 @@
+If-Else Exercises
+Concept: if-else statements allow conditional execution of code based on whether a condition evaluates to true or false.
+1. Check Even or Odd Write a program that takes a number as input and prints whether it is even or odd. Hint: Use the modulo operator (%) to check divisibility by 2.
+           Solution
+          const readline = require('readline');
+     const rl = readline.createInterface({
+     input: process.stdin,
+     output: process.stdout
+     });
+    rl.question('Enter a number: ', (input) => {
+    const number = Number(input);
+    if (number % 2 === 0) {
+        console.log(`${number} is Even`);
+    } else {
+        console.log(`${number} is Odd`);
+    }
+    rl.close();
+    });
+2. Age Group Classifier Create a program that takes a person’s age as input and prints whether they are a "Child" (0-12), "Teen" (13-19), or "Adult" (20+). Hint: Use multiple if-else conditions to check age ranges.
+            Solution
+           const readline = require('readline');
+           const rl = readline.createInterface({
+    		input: process.stdin,
+    		output: process.stdout
+ });
+rl.question('Enter persons age: ', (input) => {
+    const age = Number(input);
+    if (age >=0 && age <= 12) {
+        console.log(`Person with age ${age} is a Child`);
+    } 
+    else if (age>=13 && age <= 19) {
+        console.log(`person with age ${age} is a teen`);
+    }
+    if (age >= 20) 
+        {
+        console.log(`Person with age ${age} is an adult`);
+        }
+    rl.close();
+});
+
+3. Positive, Negative, or Zero Write a program that checks if a number is positive, negative, or zero and prints the result. Hint: Use if, else if, and else to cover all cases.
+         Solution
+          const readline = require('readline');
+          const rl = readline.createInterface({
+           input: process.stdin,
+          output: process.stdout
+         });
+       rl.question('Enter a number: ', (input) => {
+      const num = Number(input);
+      if (num > 0) {
+      console.log(`The number ${num} is Positive`);
+    } else if (num < 0) {
+        console.log(`The number ${num} is Negative`);
+    } else {
+     console.log(`The number is Zero`);
+    }
+   rl.close();
+});
+          
+4. Grade Calculator Take a test score (0-100) as input and print the corresponding letter grade: A (90-100), B (80-89), C (70-79), D (60-69), F (below 60). Hint: Chain else if statements for each grade range.
+             Solution
+            const readline = require('readline');
+            const rl = readline.createInterface({
+           input: process.stdin,
+          output: process.stdout
+          });
+          rl.question('Enter a exam numbers : ', (input) => {
+          const num = Number(input);
+    if (num > 90 && num <= 100) {
+        console.log(`Grade is A `);
+    } if (num>80 && num < 89) {
+        console.log(`Grade is B`);
+    } if (num>70 && num < 79){
+        console.log(`Grade is C`);
+    } if (num>60 && num < 69){
+        console.log(`Grade is D`);
+    } else if (num<=59){ 
+        console.log(`Grade is F`);}
+       rl.close();
+});
+         
+5. Leap Year Checker Write a program to determine if a given year is a leap year (divisible by 4, but not 100 unless also divisible by 400). Hint: Combine conditions using logical operators (&&, ||).
+Solution
+       const readline = require('readline');
+
+       const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+     });
+
+     rl.question('Enter a year: ', (input) => {
+     const year = Number(input);
+
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        console.log(`${year} is a Leap Year`);
+    } else {
+        console.log(`${year} is NOT a Leap Year`);
+    }
+
+    rl.close();
+});
+
+6. Larger Number Create a program that takes two numbers as input and prints which one is larger or if they are equal. Hint: Use if-else to compare the numbers with >, <, and ===.
+Solution
+            const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter first number: ', (firstInput) => {
+    rl.question('Enter second number: ', (secondInput) => {
+        const num1 = Number(firstInput);
+        const num2 = Number(secondInput);
+
+        if (num1 > num2) {
+            console.log(`${num1} is larger than ${num2}`);
+        } else if (num1 < num2) {
+            console.log(`${num2} is larger than ${num1}`);
+        } else {
+            console.log(`Both numbers are equal`);
+        }
+
+        rl.close();
+    });
+});
+
+
+7. Temperature Alert Write a program that takes a temperature in Celsius and prints "Too Hot" (above 30), "Comfortable" (20-30), or "Too Cold" (below 20). Hint: Use if-else to check temperature ranges.
+Solution
+            const readline = require('readline');
+          const rl = readline.createInterface({
+           input: process.stdin,
+          output: process.stdout
+          });
+
+        rl.question('Enter temperature in Celsius: ', (input) => {
+        const temp = Number(input);
+
+         if (temp > 30) {
+        console.log(`Temperature ${temp}°C: Too Hot`);
+        } else if (temp >= 20 && temp <= 30) {
+        console.log(`Temperature ${temp}°C: Comfortable`);
+       } else {
+        console.log(`Temperature ${temp}°C: Too Cold`);
+        }
+
+       rl.close();
+       });
+
+             
+            
+8. Login Validation Create a program that checks if a username is "admin" and password is "12345". Print "Access Granted" or "Access Denied". Hint: Use && to check both conditions in an if statement.
+             Solution
+
+            const readline = require('readline');
+      const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+     });
+
+     rl.question('Enter username: ', (username) => {
+     rl.question('Enter password: ', (password) => {
+        if (username === 'admin' && password === '12345') {
+            console.log('Access Granted');
+        } else {
+            console.log('Access Denied');
+        }
+        rl.close();
+    });
+});
+
+9. Vowel Checker Write a program that takes a single character as input and prints whether it is a vowel (a, e, i, o, u) or a consonant. Hint: Use multiple conditions with || in the if statement.
+Solution
+		const readline = require('readline');
+		const rl = readline.createInterface({
+    		input: process.stdin,
+    		output: process.stdout
+		});
+
+		rl.question('Enter a single character: ', (input) => {
+    		const char = input.toLowerCase();
+
+    	if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+        	console.log(`The character '${char}' is a Vowel`);
+    	} else {
+        console.log(`The character '${char}' is a Consonant`);
+    	}
+
+    	rl.close();
+	});
+
+
+10. Traffic Light Simulator Take a traffic light color ("red", "yellow", "green") as input and print the action: "Stop", "Wait", or "Go". Hint: Use if-else to match the input string to the correct action.
+Solution
+const readline = require('readline');
+      const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+});
+
+rl.question('Enter traffic light color (red, yellow, green): ', (color) => {
+    const light = color.toLowerCase(); // normalize input
+
+    if (light === 'red') {
+        console.log('Stop');
+    } else if (light === 'yellow') {
+        console.log('Wait');
+    } else if (light === 'green') {
+        console.log('Go');
+    } else {
+        console.log('Invalid color! Please enter red, yellow, or green.');
+    }
+
+    rl.close();
+  });
+For Loop Exercises
+Concept: A for loop repeats a block of code a specific number of times, typically using a counter variable.
+1. Print Numbers 1 to 10 Write a program to print numbers from 1 to 10 using a for loop. Hint: Initialize a counter at 1 and loop until 10.
+Solution
+for (let i = 1; i <= 10; i++) {
+console.log(i);
+}
+
+2. Sum of First N Numbers Create a program that calculates the sum of numbers from 1 to a user-defined number n. Hint: Use a variable to accumulate the sum inside the loop.
+
+           Solution
+const readline = require('readline');
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+      output: process.stdout
+   });
+
+   rl.question('Enter a number n: ', (input) => {
+     const n = Number(input);
+     let sum = 0;
+
+    if (isNaN(n) || n < 1) {
+        console.log('Please enter a valid positive number.');
+    } else {
+        for (let i = 1; i <= n; i++) {
+            sum += i;
+        }
+        console.log(`The sum of numbers from 1 to ${n} is: ${sum}`);
+    }
+
+    rl.close();
+});
+
+3. Multiplication Table Write a program to print the multiplication table of a given number (e.g., 5) up to 10. Hint: Multiply the loop counter by the input number in each iteration.
+            
+        Solution
+        const readline = require('readline');
+
+    const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+ rl.question('Enter a number to print its multiplication table: ', (input) => {
+    const num = Number(input);
+
+    if (isNaN(num)) {
+        console.log('Please enter a valid number.');
+    } else {
+        console.log(`Multiplication Table of ${num}:`);
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${num} x ${i} = ${num * i}`);
+        }
+    }
+
+    rl.close();
+});
+
+4. Count Down Create a program to print numbers from 10 down to 1. Hint: Use a for loop with a decrementing counter (i--).
+Solution
+for (let i = 10; i >= 1; i--) {
+           console.log(i);
+         }
+
+5. Factorial Calculator Write a program to calculate the factorial of a given number using a for loop. Hint: Multiply the loop counter with a running product.
+
+       Solution
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter a number to find its factorial: ', (input) => {
+    const num = Number(input);
+    let factorial = 1;
+
+    if (num < 0) {
+        console.log('Factorial is not defined for negative numbers.');
+    } else {
+        for (let i = 1; i <= num; i++) {
+            factorial *= i; // multiply running product by loop counter
+        }
+        console.log(`Factorial of ${num} is ${factorial}`);
+    }
+
+    rl.close();
+});
+
+6. Print Even Numbers Print all even numbers between 1 and 20. Hint: Use a loop and check if the counter is divisible by 2.
+
+Solution
+for (let i = 2; i <= 20; i += 2) {
+            console.log(i);
+           }
+
+7. Array Sum Given an array of numbers (e.g., [1, 2, 3, 4, 5]), calculate the sum of all elements using a for loop. Hint: Access array elements with array[i] and add to a sum variable.
+
+Solution
+const numbers = [1, 2, 3, 4, 5];
+            let sum = 0;
+
+             for (let i = 0; i < numbers.length; i++) {
+             sum += numbers[i];
+           }
+
+   console.log(`The sum of the array elements is: ${sum}`);
+
+8. Reverse String Write a program to print a string’s characters in reverse order using a for loop. Hint: Start the loop from the last index (string.length - 1) and decrement.
+     Solution
+
+const readline = require('readline');
+
+     const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter a string: ', (str) => {
+    let reversed = '';
+
+    // Loop from last index to first
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    console.log(`Reversed string: ${reversed}`);
+
+    rl.close();
+});
+
+9. Fibonacci Sequence Print the first n numbers of the Fibonacci sequence (e.g., 0, 1, 1, 2, 3, 5, …). Hint: Use variables to track the previous two numbers and update them in the loop.
+
+Solution
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter the number of Fibonacci terms: ', (input) => {
+    const n = Number(input);
+
+    if (n <= 0) {
+        console.log('Please enter a positive number.');
+    } else {
+        let a = 0, b = 1;
+
+        console.log('Fibonacci sequence:');
+        for (let i = 1; i <= n; i++) {
+            console.log(a);
+            const next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+
+    rl.close();
+});
+10. Square Numbers Print the squares of numbers from 1 to 10 (e.g., 1, 4, 9, 16, …). Hint: Use i * i inside the loop to calculate the square.
+            Solution
+    for (let i = 1; i <= 10; i++) {
+     console.log(`Square of ${i} is ${i * i}`);
+     }
+
+
+While Loop Exercises
+Concept: A while loop repeats a block of code as long as a condition is true.
+1. Print Numbers 1 to 10 Write a program to print numbers from 1 to 10 using a while loop. Hint: Use a counter variable and increment it until it reaches 10.
+           Solution 
+           let counter = 1;
+            while (counter <= 10) {
+           console.log(counter);
+           counter++;
+          }
+
+2. Sum Until Limit Create a program that keeps adding numbers (1, 2, 3, …) until the sum exceeds a user-defined limit. Print the final sum. Hint: Use a while loop to check if the sum is below the limit.
+Solution
+           const readline = require('readline');
+    const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+ });
+
+    rl.question('Enter the limit: ', (input) => {
+    const limit = Number(input);
+    let sum = 0;
+    let num = 1;
+
+    while (sum <= limit) {
+        sum += num;
+        num++;
+    }
+
+    console.log(`Final sum after exceeding ${limit} is: ${sum}`);
+
+    rl.close();
+});
+
+3. Count Digits Write a program to count the number of digits in a positive integer. Hint: Divide the number by 10 in each iteration until it becomes 0.
+Solution            
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter a positive integer: ', (input) => {
+    let num = Number(input);
+
+    if (isNaN(num) || num <= 0) {
+        console.log('Please enter a valid positive integer.');
+    } else {
+        let count = 0;
+
+        while (num > 0) {
+            num = Math.floor(num / 10); // Remove last digit
+            count++;
+        }
+
+        console.log(`The number of digits is: ${count}`);
+    }
+
+    rl.close();
+});
+
+4. Power Calculator Calculate the power of a number (e.g., 2^5) using a while loop. Hint: Multiply the base by itself in each iteration until the exponent is reached.
+           Solution           
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter base: ', (baseInput) => {
+    rl.question('Enter exponent: ', (expInput) => {
+        const base = Number(baseInput);
+        const exponent = Number(expInput);
+
+        if (exponent < 0) {
+            console.log('Exponent should be non-negative for this program.');
+        } else {
+            let result = 1;
+            let count = 0;
+
+            while (count < exponent) {
+                result *= base;
+                count++;
+            }
+
+            console.log(`${base}^${exponent} = ${result}`);
+        }
+
+        rl.close();
+    });
+});
+
+5. Reverse Number Write a program to reverse a given number (e.g., 123 becomes 321). Hint: Extract digits using modulo (%) and build the reversed number.
+            Solution
+        const readline = require('readline');
+
+        const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Enter a number: ', (input) => {
+    let num = Number(input);
+    let reversed = 0;
+
+    while (num > 0) {
+        let digit = num % 10;        // Extract last digit
+        reversed = reversed * 10 + digit; // Append digit to reversed number
+        num = Math.floor(num / 10);  // Remove last digit
+    }
+
+    console.log(`Reversed number: ${reversed}`);
+
+    rl.close();
+});
+
+
+6. Guess the Number Create a program that repeatedly asks the user to guess a number (e.g., 42) until they get it right. Hint: Use prompt() or a predefined input and a while loop to check guesses.
+          
+7. Sum of Array Elements Given an array (e.g., [10, 20, 30]), calculate the sum of its elements using a while loop. Hint: Use an index to access array elements and increment it.
+Solution
+            const arr = [10, 20, 30];
+             let sum = 0;
+             let i = 0;
+
+          while (i < arr.length) {
+          sum += arr[i];
+           i++;
+          }
+
+         console.log(`Sum of array elements: ${sum}`);
+
+8. Find First Multiple Write a program to find the smallest multiple of a given number that is greater than 100. Hint: Start with the number and keep adding it until the result exceeds 100.
+Solution
+    let num = parseInt(prompt("Enter a number:"));
+
+    if (isNaN(num) || num <= 0) {
+        alert("Please enter a valid positive number.");
+    } else {
+        let multiple = num;
+
+        // Keep adding until it exceeds 100
+        while (multiple <= 100) {
+            multiple += num;
+        }
+
+        alert(`The smallest multiple of ${num} greater than 100 is: ${multiple}`);
+    }
+
+
+9. Print Odd Numbers Print all odd numbers from 1 to 20 using a while loop. Hint: Check if the counter is odd using modulo and increment by 1.
+           Solution 
+           let num = 1; // start from 1
+            let result = "";
+
+           while (num <= 20) {
+            if (num % 2 !== 0) { // check if odd
+            result += num + (num < 19 ? ", " : "");
+        }
+        num++; // increment by 1
+    }
+
+    alert("Odd numbers from 1 to 20: " + result);
+
+10. Collatz Conjecture For a given number, repeatedly apply the rule: if even, divide by 2; if odd, multiply by 3 and add 1. Stop when the number becomes 1. Print the sequence. Hint: Use a while loop to check if the number is not 1.
+
+Break Exercises
+Concept: The break statement exits a loop immediately when a condition is met.
+1. Stop at 5 Write a for loop to print numbers from 1 to 10 but stop when the number is 5. Hint: Use break when the counter equals 5.
+
+Solution
+for (let i = 1; i <= 10; i++) {
+                if (i === 5) {
+                break; // stop when i equals 5
+              }
+              console.log(i);
+        } 
+
+2. Find First Even Number Given an array of numbers, print the first even number and stop. Hint: Loop through the array and use break after finding an even number.
+
+Solution
+const numbers = [3, 7, 9, 12, 15, 18];
+
+let i = 0; // Initialize index
+
+while (i < numbers.length) {
+    if (numbers[i] % 2 === 0) { // Check if the number is even
+        console.log("First even number:", numbers[i]);
+        break; // Stop after finding the first even number
+    }
+    i++; // Move to the next element
+}
+
+3. Limit Sum Sum numbers from 1 to 100 but stop if the sum exceeds 50. Print the sum and the last number added. Hint: Use a while loop and break when the sum condition is met.
+             Solution
+      let sum = 0;
+	  let num = 1;
+
+      while (num <= 100) {
+        sum += num;
+         if (sum > 50) {
+          console.log("Sum exceeded 50!");
+          console.log("Final Sum:", sum);
+          console.log("Last number added:", num);
+          break; // Stop when sum exceeds 50
+       }
+    num++;
+}
+
+4. Search Character Search a string for the first occurrence of the letter "a" and stop. Print its position or "Not found". Hint: Use a for loop and break when "a" is found.
+Solution            
+            const str = "Hello world"; // Example string
+           let found = false;
+
+           for (let i = 0; i < str.length; i++) {
+           if (str[i] === 'a') {
+            console.log("First 'a' found at position:", i);
+            found = true;
+            break; // Stop after finding the first 'a'
+           }
+}
+
+if (!found) {
+    console.log("Not found");
+}
+
+5. Prime Number Check Check if a number is prime by testing divisibility up to its square root. Stop if a divisor is found. Hint: Use break when a number divides evenly.
+
+Solution
+const num = 29; // Example number
+let isPrime = true;
+
+if (num <= 1) {
+    isPrime = false;
+} else {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            console.log(`Not prime. Divisible by ${i}`);
+            isPrime = false;
+            break; // Stop when a divisor is found
+        }
+    }
+}
+
+if (isPrime) {
+    console.log(`${num} is prime`);
+}
+
+6. First Negative Number Given an array, find and print the first negative number, then stop. Hint: Use a for loop and break when a negative number is found.
+
+Solution
+const numbers = [5, 3, -7, 8, -2]; // Example array
+let found = false;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 0) {
+        console.log("First negative number:", numbers[i]);
+        found = true;
+        break; // Stop after finding the first negative number
+    }
+}
+
+if (!found) {
+    console.log("No negative number found");
+}
+
+
+7. Password Attempts Simulate a login system that allows 3 password attempts. Exit the loop if the correct password is entered. Hint: Use a while loop with a counter and break on correct input.
+
+Solution
+const correctPassword = "secret123"; // Example correct password
+let attempts = 0;
+let maxAttempts = 3;
+
+while (attempts < maxAttempts) {
+    let input = prompt("Enter your password:"); // Simulate user input
+    attempts++;
+
+    if (input === correctPassword) {
+        console.log("Login successful!");
+        break; // Exit loop on correct password
+    } else {
+        console.log(`Incorrect password. Attempts left: ${maxAttempts - attempts}`);
+    }
+
+    if (attempts === maxAttempts) {
+        console.log("Account locked. Too many failed attempts.");
+    }
+}
+
+8. Stop at Vowel Loop through a string and print characters until a vowel is encountered, then stop. Hint: Use break when a vowel is detected.
+
+Solution
+const str = "rhythmical"; // Example string
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i].toLowerCase())) {
+        console.log(`Vowel '${str[i]}' found at position ${i}. Stopping.`);
+        break; // Stop when a vowel is encountered
+    } else {
+        console.log(str[i]);
+    }
+}
+
+9. Sum Until Zero Keep asking for numbers and sum them until the user enters 0, then stop and print the sum. Hint: Use a while loop with break when input is 0.
+
+Solution
+let sum = 0;
+
+while (true) {
+    let input = prompt("Enter a number (0 to stop):");
+    let num = Number(input);
+
+    if (num === 0) {
+        console.log("Stopping input...");
+        break; // Exit loop when user enters 0
+    }
+
+    sum += num;
+}
+
+console.log("Total sum:", sum);
+
+10. Find Divisor Find the smallest divisor of a number (other than 1) and stop once found. Hint: Use a for loop and break when a divisor is found.
+          Solution
+        const num = 91; 
+let divisor = null;
+
+for (let i = 2; i <= num; i++) {
+    if (num % i === 0) {
+        divisor = i;
+        console.log(`Smallest divisor (other than 1): ${divisor}`);
+        break; // Stop after finding the first divisor
+    }
+}
+
+if (divisor === null) {
+    console.log(`${num} is prime (no divisor other than 1 and itself)`);
+}
+
+
+Continue Exercises
+Concept: The continue statement skips the current iteration of a loop and proceeds to the next one.
+1. Skip Even Numbers Print numbers from 1 to 10, skipping even numbers. Hint: Use continue when the counter is divisible by 2.
+
+Solution
+for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                 continue; // Skip even numbers
+              }
+              console.log(i); // Print odd numbers
+         }
+
+2. Skip Multiples of 3 Print numbers from 1 to 20, skipping multiples of 3. Hint: Use continue with the modulo operator.
+Solution
+for (let i = 1; i <= 20; i++) {
+    		if (i % 3 === 0) {
+        		continue; // Skip multiples of 3
+    		}
+    		console.log(i);
+		}
+
+3. Sum Odd Numbers Calculate the sum of odd numbers from 1 to 20, skipping even numbers. Hint: Use continue to skip even numbers in a for loop.
+         Solution               
+
+
+           let sum = 0;
+
+         for (let i = 1; i <= 20; i++) {
+         if (i % 2 === 0) {
+        continue; // Skip even numbers
+        }
+        sum += i; // Add odd numbers
+       }
+
+console.log("Sum of odd numbers from 1 to 20:", sum);
+
+4. Skip Vowels in String Print all characters in a string, skipping vowels. Hint: Use continue when a vowel is detected.
+Solution
+let str = prompt("Enter a string:");
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+             for (let i = 0; i < str.length; i++) {
+              if (vowels.includes(str[i].toLowerCase())) {
+              continue; // Skip vowels
+              }
+             console.log(str[i]);
+             }
+
+5. Positive Numbers Only Given an array, sum only the positive numbers, skipping negatives. Hint: Use continue when an element is less than 0.
+
+Solution
+const numbers = [5, -3, 8, -2, 10, -7]; // Example array
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 0) {
+        continue; // Skip negative numbers
+    }
+    sum += numbers[i]; // Add positive numbers
+}
+
+console.log("Sum of positive numbers:", sum);
+
+6. Skip Specific Number Print numbers from 1 to 15, skipping the number 7. Hint: Use continue when the counter equals 7.
+             Solution
+
+	for (let i = 1; i <= 15; i++) {
+	    if (i === 7) {
+        	continue; // Skip number 7
+    	}
+    	console.log(i);
+	}
+
+7. Skip Empty Strings Given an array of strings, print only non-empty strings, skipping empty ones. Hint: Use continue when the string length is 0.
+
+Solution
+const strings = ["Hello", "", "World", "", "JavaScript", ""]; // Example array
+for (let i = 0; i < strings.length; i++) {
+if (strings[i].length === 0) {
+continue; // Skip empty strings
+}
+console.log(strings[i]);
+}
+
+
+8. Skip Multiples of 5 Print numbers from 1 to 50, skipping multiples of 5. Hint: Use continue with the modulo operator.
+Solution
+for (let i = 1; i <= 50; i++) {
+                if (i % 5 === 0) {
+                continue; // Skip multiples of 5
+                }
+                console.log(i);
+                }
+
+9. Count Consonants Count the number of consonants in a string, skipping vowels. Hint: Use continue to skip vowel checks and increment a counter.
+             Solution
+
+		let str = prompt("Enter a string:");
+                      const vowels = ['a', 'e', 'i', 'o', 'u'];
+                      let consonantCount = 0;
+
+                       for (let i = 0; i < str.length; i++) {
+                      let char = str[i].toLowerCase();
+
+                        // Skip non-alphabet characters
+                         if (!/[a-z]/.test(char)) {
+                       continue;
+                        }
+
+                        // Skip vowels
+                         if (vowels.includes(char)) {
+                        continue;
+                        }
+
+                      // Count consonants
+                        consonantCount++;
+                       }
+
+                      console.log(`Number of consonants: ${consonantCount}`);
+
+
+10. Skip Invalid Scores Given an array of test scores, calculate the average of valid scores (0-100), skipping invalid ones (negative or above 100). Hint: Use continue to skip invalid scores and track valid ones.
+         Solution   
+         for (let i = 0; i < scores.length; i++) {
+            if (scores[i] < 0 || scores[i] > 100) {
+           continue; // Skip invalid scores
+           }
+             sum += scores[i];
+             count++;
+          }
+          if (count > 0) {
+          const average = sum / count;
+    console.log(`Average of valid scores: ${average.toFixed(2)}`);
+      } 
+    else {
+    console.log("No valid scores found.");
+    }
+
+
+Switch Case Exercises
+Concept: The switch statement evaluates an expression and executes code based on matching cases.
+1. Day of the Week Take a number (1-7) and print the corresponding day of the week (1 = Monday, 7 = Sunday). Hint: Use a switch with cases for each number.
+            Solution  
+            let dayNumber = parseInt(prompt("Enter a number (1-7):"));
+              switch (dayNumber) {
+               case 1:
+               console.log("Monday");
+               break;
+               case 2:
+               console.log("Tuesday");
+               break;
+              case 3:
+              console.log("Wednesday");
+              break;
+              case 4:
+              console.log("Thursday");
+              break;
+              case 5:
+              console.log("Friday");
+              break;
+              case 6:
+              console.log("Saturday");
+              break;
+              case 7:
+              console.log("Sunday");
+              break;
+              default:
+              console.log("Invalid input! Please enter a number between 1 and 7.");
+}
+
+2. Month Name Write a program that takes a month number (1-12) and prints the month name. Hint: Use a switch with 12 cases and a default for invalid input.
+Solution
+            let monthNumber = parseInt(prompt("Enter a month number (1-12):"));
+             switch (monthNumber) {
+             case 1:
+             console.log("January");
+             break;
+             case 2:
+             console.log("February");
+             break;
+             case 3:
+             console.log("March");
+             break;
+             case 4:
+             console.log("April");
+             break;
+             case 5:
+             console.log("May");
+             break;
+             case 6:
+             console.log("June");
+             break;
+             case 7:
+             console.log("July");
+             break;
+             case 8:
+             console.log("August");
+             break;
+             case 9:
+             console.log("September");
+             break;
+             case 10:
+             console.log("October");
+             break;
+             case 11:
+             console.log("November");
+             break;
+           case 12:
+           console.log("December");
+            break;
+           default:
+           console.log("Invalid input! Please enter a number between 1 and 12.");
+          }
+
+3. Simple Calculator Create a program that takes two numbers and an operator (+, -, *, /) and performs the operation using a switch. Hint: Use the operator as the switch expression.
+
+ Solution
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let operator = prompt("Enter an operator (+, -, *, /):");
+
+switch (operator) {
+    case '+':
+        console.log(`Result: ${num1 + num2}`);
+        break;
+    case '-':
+        console.log(`Result: ${num1 - num2}`);
+        break;
+    case '*':
+        console.log(`Result: ${num1 * num2}`);
+        break;
+    case '/':
+        if (num2 !== 0) {
+            console.log(`Result: ${num1 / num2}`);
+        } else {
+            console.log("Error: Division by zero is not allowed.");
+        }
+        break;
+    default:
+        console.log("Invalid operator! Please use +, -, *, or /.");
+}
+
+4. Grade Letter Take a numeric score (0-100) and print the letter grade (A, B, C, D, F) using a switch. Hint: Divide the score into ranges and assign cases (e.g., 90-100 for A).
+         Solution            
+let score = parseInt(prompt("Enter your score (0-100):"));
+let grade;
+
+switch (true) {
+    case (score >= 90 && score <= 100):
+        grade = "A";
+        break;
+    case (score >= 80 && score < 90):
+        grade = "B";
+        break;
+    case (score >= 70 && score < 80):
+        grade = "C";
+        break;
+    case (score >= 60 && score < 70):
+        grade = "D";
+        break;
+    case (score >= 0 && score < 60):
+        grade = "F";
+        break;
+    default:
+        grade = "Invalid score! Please enter a number between 0 and 100.";
+}
+
+console.log(`Grade: ${grade}`);
+
+5. Vowel or Consonant Write a program that takes a character and uses a switch to determine if it’s a vowel or consonant. Hint: Use cases for each vowel and a default for consonants.
+
+Solution
+let char = prompt("Enter a single character:").toLowerCase();
+
+switch (char) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        console.log(`${char} is a vowel`);
+        break;
+    default:
+        // Check if it's an alphabet letter
+        if (/[a-z]/.test(char)) {
+            console.log(`${char} is a consonant`);
+        } else {
+            console.log("Invalid input! Please enter an alphabet character.");
+        }
+}
+
+6. Traffic Light Action Take a traffic light color ("red", "yellow", "green") and print the action ("Stop", "Wait", "Go") using a switch. Hint: Use string cases for each color.
+
+ Solution 
+let color = prompt("Enter traffic light color (red, yellow, green):").toLowerCase();
+switch (color) {
+            case "red":
+            console.log("Stop");
+            break;
+            case "yellow":
+            console.log("Wait");
+            break;
+            case "green":
+           console.log("Go");
+           break;
+           default:
+           console.log("Invalid color! Please enter red, yellow, or green.");
+}
+
+7. Season Finder Take a month number (1-12) and print the season (Winter, Spring, Summer, Fall) using a switch. Hint: Group months into cases for each season.
+
+ Solution 
+let month = parseInt(prompt("Enter a month number (1-12):"));
+            let season;
+            switch (month) {
+            case 12:
+            case 1:
+            case 2:
+         season = "Winter";
+        break;
+        case 3:
+        case 4:
+        case 5:
+        season = "Spring";
+        break;
+            case 6:
+            case 7:
+            case 8:
+           season = "Summer";
+           break;
+          case 9:
+          case 10:
+          case 11:
+          season = "Fall";
+          break;
+         default:
+        season = "Invalid month! Please enter a number between 1 and 12.";
+}
+
+8. Menu Selector Create a program that displays a menu (1 = Pizza, 2 = Burger, 3 = Salad) and prints the selected item using a switch. Hint: Use cases for each menu option and a default for invalid choices.
+
+Solution 
+let choice = parseInt(prompt("Menu:\n1 = Pizza\n2 = Burger\n3 = Salad\nEnter your choice:"));
+           switch (choice) {
+           case 1:
+            console.log("You selected: Pizza");
+            break;
+            case 2:
+            console.log("You selected: Burger");
+            break;
+            case 3:
+            console.log("You selected: Salad");
+            break;
+            default:
+            console.log("Invalid choice! Please enter 1, 2, or 3.");
+           }
+
+9. Currency Converter Take a currency code (USD, EUR, GBP) and print its full name (e.g., "United States Dollar") using a switch. Hint: Use string cases for each currency code.
+
+  Solution 
+let currencyCode = prompt("Enter a currency code (USD, EUR, GBP):");
+
+
+currencyCode = currencyCode.toUpperCase();
+
+switch (currencyCode) {
+    case "USD":
+        alert("United States Dollar");
+        break;
+    case "EUR":
+        alert("Euro");
+        break;
+    case "GBP":
+        alert("British Pound Sterling");
+        break;
+    default:
+        alert("Unknown currency code");
+}
+10. Animal Sound Take an animal name (e.g., "dog", "cat", "cow") and print its sound ("Woof", "Meow", "Moo") using a switch. Hint: Use a default case for unknown animals.
+      Solution 
+  
+        let animal = prompt("Enter an animal name (dog, cat, cow):");
+
+//         Convert input to lowercase for consistency
+            animal = animal.toLowerCase();
+
+           switch (animal) {
+            case "dog":
+            alert("Woof");
+            break;
+            case "cat":
+            alert("Meow");
+            break;
+            case "cow":
+            alert("Moo");
+            break;
+            default:
+            alert("Unknown animal sound");
+         }
